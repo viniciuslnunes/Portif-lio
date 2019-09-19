@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CursoJavaScript</title>
+</head>
+<body>
+    <script>
+
+    // não é necessário definir tipos de parâmetros de variáveis
+    function soma(numero1, numero2){
+        var resultado = numero1 + numero2;
+
+        return resultado
+    }  
+
+// A variável "resultado" precisa ser setada fora da função pois ela só é visível pela função
+// Mas assim que setada fora, define o "resultado".  
+    var resultado = soma(1, 2);
+    console.log(resultado);
+    </script>
+</body>
+</html>
