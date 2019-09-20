@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <script>
+        function exibeAlgo(){
+            console.log('Hello World')
+        }
+        //Com parênteses já está executando a função
+    // setInterval(exibeAlgo(), 1000); 
+    //Sem parênteses referencia/repassa a função como parâmetro
+    //SetInterval seta o periodo de execução por tempo definido continuamente
+    setInterval(exibeAlgo, 1000); 
+    //SetTimeOut seta o periodo uma vez no tempo 
+    setTimeout(exibeAlgo, 5000); 
+    </script>
+    
+</body>
+</html>
