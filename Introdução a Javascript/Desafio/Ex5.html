@@ -26,7 +26,9 @@ com um separador utilize o join. -->
 </head>
 
 <body>
-        <script> usuarios = [
+    
+        <script>
+        var usuarios = [
         {
             nome: "Diego",
             habilidades: ["Javascript","ReactJs", "Redux"]
@@ -37,12 +39,11 @@ com um separador utilize o join. -->
         }
          
     ];
+    
       
-for (nome of usuarios)
-{
-    console.log(usuarios[0]);
-    // console.log(usuarios.join(nome))
-}
+     usuarios.map(users=>(
+         console.log("O "+ users.nome + ", Habilidades: " + users.habilidades.map(habilidade=>habilidade) )
+     ))
 
 // 
     </script>
