@@ -1,0 +1,33 @@
+<!-- Calcule a média de diversas notas digitadas pelo usuário. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="notas">
+    <button onclick="addNote()">Add</button>
+    <button onclick="CalcMedia()">calcular</button>
+    <script>
+        let notas = []
+        addNote = () => {
+            notas.push(document.getElementById('notas').value)
+            document.getElementById('notas').value = ""
+
+        }
+        function CalcMedia() {
+            notas.forEach(element => {
+                alert(element)
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>
