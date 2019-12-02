@@ -27,8 +27,9 @@ com um separador utilize o join. -->
 </head>
 
 <body>
-
+ <span id="press"></span>
     <script>
+    var span = document.getElementById('press')
         var usuarios = [
             {
                 nome: "Diego",
@@ -40,9 +41,8 @@ com um separador utilize o join. -->
             }
         ];
             for(usuario of usuarios){
-                console.log("0 " + usuarios[0].nome + " possui as habilidades: " + usuarios[0].habilidades.join(", ") +
-                " .0 " + usuarios[1].nome + " possui as habilidades: " + usuarios[1].habilidades.join(", ")) 
-                
+                span.innerHTML = "O " + usuarios[0].nome + " possui as habilidades: " + usuarios[0].habilidades.join(", ") +
+                ". O " + usuarios[1].nome + " possui as habilidades: " + usuarios[1].habilidades.join(", ")             
             }
 
 
