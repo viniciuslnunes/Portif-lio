@@ -1,0 +1,87 @@
+<!-- -------------------- EXEMPLO 3 MANIPULANDO DOM ------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos Inline</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="none" id="nomeid" class="nomeclass" />
+        <button class="botao"">Adicionar</button>
+    </div>
+    <script>
+        // Buscando dados da dom para manipulação 
+        var btnElement = document.querySelector('button.botao');
+        var resp = document.getElementById('nomeid')
+        
+        btnElement.onclick = function () {
+            var text = resp.value;
+            alert(text)
+        }
+        
+    </script>
+</body>
+
+</html>
+                    
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos Inline</title>
+</head>
+<body>
+    <div id="app">
+        <button onclick="mostraAlerta()">Me pressione</button> -->
+<!-- <button onmouseover="mostraAlerta()">Me pressione</button> -->
+<!-- </div>
+    <script>
+        function mostraAlerta() {
+            alert('Botão for clicado')
+        }
+    </script>
+</body>
+</html> -->
+
+<!-- -------------------- EXEMPLO 2 MANIPULANDO DOM ------------------- -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos Inline</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="none" id="nomeid" class="nomeclass"/>
+        <button class="botao" onclick="mostraAlerta()">Adicionar</button>
+        <button class="botao" onclick="mostraAlerta()">Adicionar</button>
+
+    </div>
+    <script>
+                    // Buscando dados da dom para manipulação
+            var inputElement = document.getElementById('nomeid');
+            var inputElement = document.getElementsByTagName('input')[0]; 
+            var inputElement = document.getElementsByClassName('nomeclass');
+            var inputElement = document.querySelector('button')
+            var inputElement = document.querySelectorAll('button')
+
+ 
+            console.log(inputElement)
+        
+
+    </script>
+</body>
+
+</html> -->
