@@ -1,0 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="quadro" id="quadro"></div>
+        <button onclick="mostraQuadro()">Mostra quadro</button>
+    </div>
+
+    <script>
+        function mostraQuadro(objeto) {
+            console.log(objeto)
+            var novoquadro = document.createElement("div");
+            novoquadro.style.width = "100px";
+            novoquadro.style.height = "100px";
+            novoquadro.style.backgroundColor = getRandomColor()
+            novoquadro.style.marginRight = "15px";
+            novoquadro.style.display = "inline-flex"
+            novoquadro.onmouseover=function(){
+                novoquadro.style.backgroundColor=getRandomColor()
+            }
+            var quadro = document.getElementById("quadro");
+            quadro.appendChild(novoquadro);
+        }
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+
+</html>
+<!-- Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+function getRandomColor() {
+ var letters = "0123456789ABCDEF";
+ var color = "#";
+ for (var i = 0; i < 6; i++) {
+ color += letters[Math.floor(Math.random() * 16)];
+ }
+ return color;
+}
+var newColor = getRandomColor(); // #E943F0 -->

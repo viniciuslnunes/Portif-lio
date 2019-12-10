@@ -9,34 +9,25 @@
 </head>
 
 <body>
-    <div class="app">
-        <div class="box" id="box"></div>
-        <button onclick="novoQuadro()">Novo quadro</button>
+    <div class="box">
+        <div class="quadro" id="quadro"></div>
+        <button onclick="mostraQuadro()">Mostra quadro</button>
     </div>
+
     <script>
 
-        var estiloquadro = document.getElementById('box');
-        estiloquadro.style.width = '100px';
-        estiloquadro.style.height = '100px';
-        estiloquadro.style.backgroundColor = '#f00';
-        estiloquadro.style.marginBottom = '15px';
+        function mostraQuadro() {
 
-        function novoQuadro(){
-        var novoquadro = document.createElement('div');
-        novoquadro.setAttribute('class', 'box');
+        var novoquadro = document.createElement("div");
+        novoquadro.style.width = "100px";
+        novoquadro.style.height = "100px";
+        novoquadro.style.backgroundColor = "#f00"
+        novoquadro.style.marginRight = "15px";
+        novoquadro.style.display = "inline-flex"
 
-    var criarElemento = document.querySelector('#app');
-    criarElemento.appendChild(novoquadro) 
-
-            }
-    
+        var quadro = document.getElementById("quadro");
+        quadro.appendChild(novoquadro);
+        }
     </script>
-
 </body>
-
 </html>
-
-<!-- 1º exercício
-Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
-vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
-aparecer na tela. -->
